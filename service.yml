@@ -1,0 +1,82 @@
+name: vinyl
+type: service
+icon: vinyl
+title: Vinyl
+scalable: true
+hostname: vinyl
+
+options:
+- version: '6.0'
+  tag: '6.0'
+  default: true
+
+containers:
+- name: vinyl
+  image: wodby/vinyl
+
+endpoints:
+- name: http
+  ports:
+  - name: http
+    number: 6081
+    protocol: http
+    main: true
+
+links:
+- name: backend
+  title: Backend
+  required: true
+  env:
+  - name: VARNISH_BACKEND_HOST
+    value: '{{link.host}}'
+  - name: VARNISH_BACKEND_PORT
+    value: '{{link.port}}'
+  selectors:
+  - type: service
+    labels:
+    - nginx
+  - type: service
+    labels:
+    - httpd
+
+env:
+- name: VARNISH_SECRET
+  value: '{{secret}}'
+  secret: true
+- name: VARNISH_PURGE_KEY
+  value: '{{purge_key}}'
+  secret: true
+- name: VARNISH_PURGE_EXTERNAL_REQUEST_HEADER
+  value: X-Real-IP
+
+tokens:
+- name: secret
+  generate:
+    regex: '[0-9a-z-]{32}'
+- name: purge_key
+  generate:
+    regex: '[0-9a-z-]{32}'
+
+labels:
+- vinyl
+- varnish
+
+configs:
+- name: main
+  title: Main
+  filepath: /etc/gotpl/default.vcl.tmpl
+  config: default.vcl.tmpl
+
+helm:
+  name: wodby
+  source: oci://registry-1.docker.io/wodby/vinyl
+  chart: oci://registry-1.docker.io/wodby/vinyl
+  version: 0.1.0
+  configurations:
+  - name: varnish
+    labels: commonLabels
+    annotations: commonAnnotations
+    env: extraEnvVars
+    resources: resources
+    volumes: extraVolumes
+    mounts: extraVolumeMounts
