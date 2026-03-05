@@ -9,6 +9,8 @@ options:
 - version: '6.0'
   tag: '6.0'
   default: true
+- version: '8.0'
+  tag: '8.0'
 
 containers:
 - name: vinyl
