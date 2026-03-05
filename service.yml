@@ -64,14 +64,16 @@ labels:
 - varnish
 
 configs:
-- name: main
+- name: main-6
   title: Main
   filepath: /etc/gotpl/default.vcl.tmpl
-  variants: 
-  - version: 6.0
-    config: default.vcl.6.tmpl
-  - version: 8.0
-    config: default.vcl.8.tmpl
+  config: default.vcl.6.tmpl
+  version: '6.0'
+- name: main-8
+  title: Main
+  filepath: /etc/gotpl/default.vcl.tmpl
+  config: default.vcl.8.tmpl
+  version: '8.0'
 
 helm:
   name: wodby
