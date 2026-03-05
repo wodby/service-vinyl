@@ -67,7 +67,12 @@ configs:
 - name: main
   title: Main
   filepath: /etc/gotpl/default.vcl.tmpl
-  config: default.vcl.tmpl
+  config: 
+  variants: 
+  - version: 6.0
+    config: default.vcl.6.tmpl
+  - version: 8.0
+    config: default.vcl.8.tmpl
 
 helm:
   name: wodby
