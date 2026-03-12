@@ -81,7 +81,7 @@ helm:
   chart: oci://registry-1.docker.io/wodby/vinyl
   version: 0.1.0
   configurations:
-  - name: vinyl
+  - container: vinyl
     labels: commonLabels
     annotations: commonAnnotations
     env: extraEnvVars
