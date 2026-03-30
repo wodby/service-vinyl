@@ -3,7 +3,6 @@ type: service
 icon: vinyl
 title: Vinyl
 scalable: true
-hostname: vinyl
 
 options:
 - version: '8.0'
