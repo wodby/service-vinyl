@@ -75,19 +75,19 @@ helm:
   source: oci://registry-1.docker.io/wodby/vinyl
   chart: oci://registry-1.docker.io/wodby/vinyl
   version: 0.1.0
+
 workloads:
 - id: main
   kind: deployment
   primary: true
-  containers:
-  - name: vinyl
-    image: wodby/vinyl
-
-    helm:
-      resources: resources
-      env: extraEnvVars
-      mounts: extraVolumeMounts
   helm:
     labels: commonLabels
     annotations: commonAnnotations
     volumes: extraVolumes
+  containers:
+  - name: vinyl
+    image: wodby/vinyl
+    helm:
+      resources: resources
+      env: extraEnvVars
+      mounts: extraVolumeMounts
