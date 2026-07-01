@@ -6,10 +6,11 @@ scalable: true
 
 options:
 - version: '8.0'
-  tag: '8.0'
+  tag: '8.0-5.2.3'
   default: true
+  eol: '2026-09-15T00:00:00+00:00'
 - version: '6.0'
-  tag: '6.0'
+  tag: '6.0-5.2.3'
 
 endpoints:
 - name: http
