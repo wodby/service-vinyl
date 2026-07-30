@@ -20,7 +20,7 @@ configuration for Vinyl.
 | Containers | `vinyl` using `wodby/vinyl` |
 | Endpoints | `http`: HTTP 6081 (main) |
 | Service links | Backend, required |
-| Helm | chart `oci://registry-1.docker.io/wodby/vinyl`; version `0.1.0` |
+| Helm | chart `oci://registry-1.docker.io/wodby/vinyl`; version `0.1.1` |
 | Configuration | 2 configuration files, 2 generated or fixed tokens |
 
 ## Use this service
