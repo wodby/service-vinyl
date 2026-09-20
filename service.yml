@@ -6,12 +6,11 @@ scalable: true
 
 options:
 - version: '8.0'
-  tag: '8.0-5.2.9'
+  tag: 8.0-r0
   default: true
   eol: '2026-09-15T00:00:00+00:00'
 - version: '6.0'
-  tag: '6.0-5.2.9'
-
+  tag: 6.0-r0
 endpoints:
 - name: http
   ports:
@@ -79,7 +78,7 @@ helm:
   name: wodby
   source: oci://registry-1.docker.io/wodby/vinyl
   chart: oci://registry-1.docker.io/wodby/vinyl
-  version: 0.2.2
+  version: 0.2.3
 
 workloads:
 - name: main
