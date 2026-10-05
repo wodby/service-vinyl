@@ -15,7 +15,7 @@ configuration for Vinyl.
 | --- | --- |
 | Service name | `vinyl` |
 | Type | Application service |
-| Versions | `8.0` by default; also available: `6.0` |
+| Versions | `9.1` by default; also available: `8.0`, `6.0` |
 | Workloads | `main` (Deployment), primary; scalable |
 | Containers | `vinyl` using `wodby/vinyl` |
 | Endpoints | `http`: HTTP 6081 (main) |
