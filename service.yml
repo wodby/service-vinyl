@@ -2,6 +2,7 @@ name: vinyl
 type: service
 icon: vinyl
 title: Vinyl
+guidance: GUIDANCE.md
 scalable: true
 
 options:
