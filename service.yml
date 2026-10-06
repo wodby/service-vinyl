@@ -11,10 +11,10 @@ options:
   default: true
   eol: '2027-09-16T00:00:00+00:00'
 - version: '8.0'
-  tag: 8.0-r1
+  tag: 8.0-r3
   eol: '2026-09-15T00:00:00+00:00'
 - version: '6.0'
-  tag: 6.0-r1
+  tag: 6.0-r4
 endpoints:
 - name: http
   ports:
