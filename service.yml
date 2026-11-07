@@ -99,6 +99,10 @@ workloads:
   containers:
   - name: vinyl
     image: wodby/vinyl
+    resources:
+      request:
+        cpu: 10
+        memory: 96
     helm:
       resources: resources
       env: extraEnvVars
