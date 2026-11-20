@@ -8,13 +8,16 @@ scalable: true
 options:
 - version: '9.1'
   tag: 9.1-r19
+  digest: sha256:63608455ed9ba71d2a06f189366c8885c47336476cf60e9476666a3930f7ec91
   default: true
   eol: '2027-09-16T00:00:00+00:00'
 - version: '8.0'
   tag: 8.0-r3
+  digest: sha256:1d56b19d8fc3e99b41fa450a32c69440b7b1abdd12e8a0958703baa77348e7a6
   eol: '2026-09-15T00:00:00+00:00'
 - version: '6.0'
   tag: 6.0-r19
+  digest: sha256:57a2d06b2790cb2dbe7f63d7323eb2796562fbadf647d64eae96244b0cc2e164
   eol: '2027-04-15T00:00:00+00:00'
 endpoints:
 - name: http
